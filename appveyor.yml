@@ -2,4 +2,4 @@ image: Visual Studio 2017
 
 init:
   - ps: choco install MicrosoftAzure-ServiceFabric-CoreSDK --source webpi --confirm
-  - ps: $ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1
+  - ps: & "$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
