@@ -4,4 +4,4 @@ init:
   - ps: Write-Host "Installing Service Fabric SDK"
   - ps: choco install MicrosoftAzure-ServiceFabric-CoreSDK --source webpi --confirm
   - ps: Write-Host "Setting up local cluster"
-  - ps: "$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
+#  - ps: "$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
