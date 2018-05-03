@@ -1,9 +1,10 @@
 image: Visual Studio 2017
 
 init:
-  - ps: Write-Host "Setting up local cluster"
-  - ps: ."$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\CleanCluster.ps1"
-  - ps: ."$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
+  # - ps: Write-Host "Setting up local cluster"
+  # - ps: ."$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\CleanCluster.ps1"
+  # - ps: ."$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
+  - ps: Write-Host "Validating local cluster"
   - ps: Connect-ServiceFabricCluster localhost:19000
 # on_finish:
 #   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
