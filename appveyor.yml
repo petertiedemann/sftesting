@@ -5,3 +5,5 @@ init:
   # - ps: choco install MicrosoftAzure-ServiceFabric-CoreSDK --source webpi --confirm
   - ps: Write-Host "Setting up local cluster"
   - ps: ."$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\ClusterSetup\DevClusterSetup.ps1"
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
